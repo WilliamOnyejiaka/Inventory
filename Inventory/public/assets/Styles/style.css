@@ -1,0 +1,241 @@
+
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --backcolor: #222831;
+    --headcolor: #00ADB5;
+}
+
+body { 
+    background-color: var(--backcolor);
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    transition: 0.5s ease;
+    z-index: 10;
+    width: 700px;
+    max-width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--headcolor);
+    padding: 1%;
+    border-bottom:1px solid white;
+}
+
+header h1 {
+    text-align: center;
+}
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 3%;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    max-width: 80%;
+    width: 600px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.form-control {
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+
+input {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5%;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.btns {
+    width: 100px;
+    max-width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.btn {
+    color: white;
+    border: 1px solid rgb(175, 175, 175);
+    margin-bottom: 5%;
+    border-radius: 3px;
+    background-color: #2e3744;
+    transition: 0.3s linear;
+}
+
+#delete {
+    color: black;
+    background-color: rgb(228, 9, 9);
+}
+
+.btn:hover {
+    background: var(--headcolor);
+}
+
+.modal {
+    color: white;
+    background-color: #222831;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 0.5s ease;
+    z-index: 100;
+    height: 110px;
+    max-height: 80%;
+    width: 400px;
+    max-width: 50%;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px black;
+}
+
+.modal.active {
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding: 1%;
+}
+
+#title {
+    margin: 0;
+}
+
+.close-btn {
+    font-size: 1.6rem;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+}
+
+.main {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0 1%;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.432);
+    z-index: 90;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: 0.4s ease;
+}
+
+.overlay.active {
+    pointer-events: all;
+    visibility: visible;
+}
+
+#summary {
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    max-height: 60%;
+    max-width: 80%;
+}
+
+#summary h3 {
+    display: inline;
+}
+
+.item-control {
+    margin-top: 4%;
+}
+
+#askmodal {
+    background-color: var(--backcolor);
+    max-width: 70%;
+    max-height: 80%;
+    height:160px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    text-align: center;
+    display: grid;
+    grid-template-columns:  auto auto;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+    max-width: 50%;
+    margin-left: 30%;
+}
+
+.asbtns {
+    font-size: 0.95rem;
+    border: 1px solid;
+    border-radius: 3px;
+    transition: 0.3s linear;
+}
+
+.asbtns:hover {
+    background-color: var(--backcolor);
+}
+
+#ok {
+    transition: 0.3s linear;
+    border-color: white;   
+    background-color: rgb(52, 52, 255);
+    margin-right: 1%;
+}
+
+#ok:hover {
+    background-color: var(--backcolor);
+}
+
+#cancel {
+    transition: 0.3s linear;
+    border-color: rgb(77, 77, 255);
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+#cancel:hover {
+    background-color: var(--backcolor);
+}

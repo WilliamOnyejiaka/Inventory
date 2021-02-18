@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Inventory">
+        <link rel="stylesheet" href="assets/Styles/style.css">
+        <title>Inventory</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Inventory</h1>
+            </header>
+            <main>
+                <form action="#">
+                    <div class="form-control">
+                        <label>Item Name: </label>
+                        <input type="text" id="item-name">
+                    </div>
+                    <div class="form-control">
+                        <label>Price:</label>
+                        <input type="number" id="price">
+                    </div>
+                    <div class="form-control">
+                        <label>Item Quantity:</label>
+                        <input type="number" id="quantity">
+                    </div>
+                    <div class="form-control">
+                        <label>Total Value:</label>
+                        <input type="number" id="total">
+                    </div>         
+                </form>
+
+                <div class="btns">
+                    <button class="btn" id="add">Add Item</button>
+                    <a href="inventory.html" target="_blank" ><button class="btn" id="show">Show Items</button></a>
+                    <button class="btn" id="details" title="Inventory Details">Details</button>        
+                    <a href="#"><button class="btn" id="delete">Delete Items</button></a>               
+                </div>
+            </main>    
+        </div>
+
+        <div class="modal alertmodal" id="alertmodal">
+            <div class="header">
+                <h1 id="title">
+                    Alert
+                </h1>
+                <div data-modal-target="alertmodal" class="close-btn">&times;</div>
+            </div>
+            <div class="main">
+                <p></p>
+            </div>
+        </div>
+
+        <div class="modal summary" id="summary">
+            <div class="header">
+                <h1 id="title">
+                    Inventory Summary
+                </h1>
+                <div data-modal-target="summary" class="close-btn">&times;</div>
+            </div>
+            <div class="main">
+                <div class="item-control">
+                    <h3>Number Of Items Stored:</h3>
+                    <h3 id="itemnum"></h3>
+                </div>
+                <div class="item-control">
+                    <h3>Total Quantity Of Items:</h3>
+                    <h3 id="tquan"></h3>
+                </div>
+                <div class="item-control">
+                    <h3>Last Entry:</h3>
+                    <h3 id="last"></h3>
+                </div>
+                <div class="item-control">
+                    <h3>Number Of Removed Items:</h3>
+                    <h3 id="removed"></h3>
+                </div>
+                <div class="item-control">
+                    <h3>Total Money Spent:</h3>
+                    <h3 id="spent"></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal askmodal" id="askmodal">
+            <div class="header">
+                <h1 id="title">
+                    Delete
+                </h1>
+                <div data-modal-target="askmodal" class="close-btn">&times;</div>
+            </div>
+            <div class="main">
+                <p>Do you what to empty your inventory?</p>
+            </div>
+            <div class="options">
+                <button id="ok" class="asbtns ok">Ok</button>
+                <button id="cancel" class="asbtns cancel">Cancel</button>
+            </div>
+        </div>
+
+        <div class="overlay summaryoverlay" id="summaryoverlay"></div>
+        <div class="overlay askoverlay" id="askoverlay"></div>
+        <div class="overlay alertoverlay" id="alertoverlay"></div>
+        <script type="module" src="assets/Scripts/index.js"></script>
+    </body>
+</html>
